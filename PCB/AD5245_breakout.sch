@@ -1,0 +1,295 @@
+EESchema Schematic File Version 4
+LIBS:AD5245_breakout-cache
+EELAYER 26 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "AD5245_breakout"
+Date "2019-08-02"
+Rev "v01"
+Comp "Cedar Grove Studios"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5B4AF928
+P 4975 5950
+F 0 "#PWR0101" H 4975 5700 50  0001 C CNN
+F 1 "GND" H 4980 5777 50  0000 C CNN
+F 2 "" H 4975 5950 50  0001 C CNN
+F 3 "" H 4975 5950 50  0001 C CNN
+	1    4975 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:CP1_Small C2
+U 1 1 5B4B3779
+P 4975 5700
+F 0 "C2" H 5050 5775 50  0000 L CNN
+F 1 "10uF" H 5050 5700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4975 5700 50  0001 C CNN
+F 3 "" H 4975 5700 50  0001 C CNN
+	1    4975 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C_Small C1
+U 1 1 5B4B3918
+P 4825 5700
+F 0 "C1" H 4650 5775 50  0000 L CNN
+F 1 "0.1uF" H 4550 5700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4825 5700 50  0001 C CNN
+F 3 "" H 4825 5700 50  0001 C CNN
+	1    4825 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 5900 4825 5800
+Wire Wire Line
+	4975 5800 4975 5900
+Connection ~ 4975 5900
+Wire Wire Line
+	4975 5900 4825 5900
+Wire Wire Line
+	4825 5500 4825 5600
+Wire Wire Line
+	4975 5600 4975 5500
+Wire Wire Line
+	4975 5500 4825 5500
+Text Notes 5175 6100 0    50   ~ 0
+Power Management
+$Comp
+L conn:CONN_01X03 J2
+U 1 1 5B519A2A
+P 6850 3975
+F 0 "J2" H 6900 4300 50  0000 R CNN
+F 1 "POTENTIOMETER" H 7400 4225 50  0000 R CNN
+F 2 "Adafruit:Pin_Header_Straight_1x03_Pitch2.54mm_no_silk" H 6900 3875 50  0001 C CNN
+F 3 "" H 6900 3875 50  0001 C CNN
+	1    6850 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D1
+U 1 1 5C030D6D
+P 5475 5700
+F 0 "D1" V 5550 5600 50  0000 C CNN
+F 1 "RED" V 5475 5575 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 5475 5700 50  0001 C CNN
+F 3 "" H 5475 5700 50  0001 C CNN
+	1    5475 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R_Small R4
+U 1 1 5C030D73
+P 5275 5500
+F 0 "R4" V 5125 5475 50  0000 C CNN
+F 1 "1K" V 5200 5500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 5275 5500 50  0001 C CNN
+F 3 "" H 5275 5500 50  0001 C CNN
+	1    5275 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5475 5500 5475 5550
+Wire Wire Line
+	5475 5850 5475 5900
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5CEEB57C
+P 4975 5400
+F 0 "#PWR0102" H 4975 5250 50  0001 C CNN
+F 1 "+3.3V" H 4990 5573 50  0000 C CNN
+F 2 "" H 4975 5400 50  0001 C CNN
+F 3 "" H 4975 5400 50  0001 C CNN
+	1    4975 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4975 5500 4975 5400
+Connection ~ 4975 5500
+Wire Wire Line
+	4975 5950 4975 5900
+Wire Wire Line
+	4975 5500 5175 5500
+Wire Wire Line
+	5375 5500 5475 5500
+Wire Wire Line
+	5475 5900 4975 5900
+Text Label 5200 3825 2    50   ~ 0
+SCL
+Text Label 5200 3925 2    50   ~ 0
+SDA
+$Comp
+L power:GND #PWR0103
+U 1 1 5D466F7B
+P 5750 4575
+F 0 "#PWR0103" H 5750 4325 50  0001 C CNN
+F 1 "GND" H 5755 4402 50  0000 C CNN
+F 2 "" H 5750 4575 50  0001 C CNN
+F 3 "" H 5750 4575 50  0001 C CNN
+	1    5750 4575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Adafruit:AD5245 U1
+U 1 1 5D44B5DF
+P 5850 3975
+F 0 "U1" H 6150 4400 50  0000 C CNN
+F 1 "AD5245" H 6050 4325 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-8" H 5850 3925 50  0001 C CNN
+F 3 "" H 5850 3925 50  0001 C CNN
+	1    5850 3975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3775 6500 3775
+$Comp
+L device:R_Small R1
+U 1 1 5D4B7776
+P 4550 3625
+F 0 "R1" H 4450 3575 50  0000 C CNN
+F 1 "10K" H 4425 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 4550 3625 50  0001 C CNN
+F 3 "" H 4550 3625 50  0001 C CNN
+	1    4550 3625
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:R_Small R2
+U 1 1 5D4B7994
+P 4800 3625
+F 0 "R2" H 4675 3575 50  0000 C CNN
+F 1 "10K" H 4650 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 4800 3625 50  0001 C CNN
+F 3 "" H 4800 3625 50  0001 C CNN
+	1    4800 3625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 3725 4800 3925
+Wire Wire Line
+	4800 3400 4800 3525
+Wire Wire Line
+	4550 3525 4550 3400
+Wire Wire Line
+	4550 3725 4550 3825
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5D4DD4A3
+P 5750 3300
+F 0 "#PWR0104" H 5750 3150 50  0001 C CNN
+F 1 "+3.3V" H 5765 3473 50  0000 C CNN
+F 2 "" H 5750 3300 50  0001 C CNN
+F 3 "" H 5750 3300 50  0001 C CNN
+	1    5750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:CONN_01X05 J1
+U 1 1 5D45B743
+P 3975 3825
+F 0 "J1" H 4000 4200 50  0000 R CNN
+F 1 "BKOUT_PINS" H 4375 4125 50  0000 R CNN
+F 2 "Adafruit:Pin_Header_Straight_1x05_Pitch2.54mm_no_silk" H 4025 3725 50  0001 C CNN
+F 3 "" H 4025 3725 50  0001 C CNN
+	1    3975 3825
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4475 5750 4525
+Wire Wire Line
+	4175 3625 4400 3625
+Text Label 5200 4025 2    50   ~ 0
+A0
+Wire Wire Line
+	4400 3725 4175 3725
+Wire Wire Line
+	4175 3825 4550 3825
+Connection ~ 4550 3825
+Wire Wire Line
+	4175 3925 4800 3925
+Connection ~ 4800 3925
+Wire Wire Line
+	4175 4025 4550 4025
+Wire Wire Line
+	4400 3400 4550 3400
+Wire Wire Line
+	4400 3400 4400 3625
+Connection ~ 4550 3400
+Wire Wire Line
+	4550 3400 4800 3400
+Wire Wire Line
+	5750 3400 5750 3300
+$Comp
+L device:R_Small R3
+U 1 1 5D475F0C
+P 4550 4300
+F 0 "R3" H 4450 4250 50  0000 C CNN
+F 1 "10K" H 4425 4325 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 4550 4300 50  0001 C CNN
+F 3 "" H 4550 4300 50  0001 C CNN
+	1    4550 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 4200 4550 4025
+Connection ~ 4550 4025
+Wire Wire Line
+	5300 4125 5250 4125
+Wire Wire Line
+	5250 4125 5250 4025
+Wire Wire Line
+	4550 4025 5250 4025
+Wire Wire Line
+	4800 3925 5300 3925
+Wire Wire Line
+	4550 3825 5300 3825
+Wire Wire Line
+	4800 3400 5750 3400
+Connection ~ 4800 3400
+Wire Wire Line
+	5750 3400 5750 3475
+Connection ~ 5750 3400
+Wire Wire Line
+	5750 4525 4550 4525
+Connection ~ 5750 4525
+Wire Wire Line
+	5750 4525 5750 4575
+Connection ~ 4550 4525
+Wire Wire Line
+	4550 4525 4400 4525
+Wire Wire Line
+	4400 3725 4400 4525
+Wire Wire Line
+	4550 4400 4550 4525
+Wire Wire Line
+	6400 3975 6650 3975
+Wire Wire Line
+	6500 3775 6500 3875
+Wire Wire Line
+	6500 3875 6650 3875
+Wire Wire Line
+	6500 4075 6500 4175
+Wire Wire Line
+	6500 4175 6400 4175
+Wire Wire Line
+	6500 4075 6650 4075
+Text Label 6625 3875 2    50   ~ 0
+A
+Text Label 6625 3975 2    50   ~ 0
+W
+Text Label 6625 4075 2    50   ~ 0
+B
+Text Label 5200 4525 2    50   ~ 0
+GND
+Text Label 4400 3725 2    50   ~ 0
+GND
+Text Label 4400 3625 2    50   ~ 0
+3V3
+$EndSCHEMATC
