@@ -1,5 +1,5 @@
-# AD5245_Digital_Pot
-### _A small breakout board and CircuitPython driver for the 10K AD5245 digital potentiometer_
+# PCB_AD5245_Digital_Potentiometer
+### _A small breakout board and CircuitPython driver for the 10K AD5245 digital potentiometer._
 
 ![Image During Initial Test](https://github.com/CedarGroveStudios/PCB_AD5245_Digital_Potentiometer/blob/main/photos/DSC05820a%20lores.jpg)
 
